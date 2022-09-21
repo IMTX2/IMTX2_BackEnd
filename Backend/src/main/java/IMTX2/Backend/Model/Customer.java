@@ -22,6 +22,8 @@ public class Customer {
     private String email;
     @Column (name="phone_number")
     private String phoneNumber;
+    @Column(name="is_admin")
+    private boolean isAdmin;
 
 
 
