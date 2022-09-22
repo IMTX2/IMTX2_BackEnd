@@ -1,10 +1,15 @@
 package IMTX2.Backend.Model;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.NoArgsConstructor;
+import org.springframework.lang.Nullable;
+
+import javax.persistence.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 @Table (name="address")
 public class Address {
     @Id
@@ -16,6 +21,11 @@ public class Address {
     @Column(name="zip_code")
     private int zipCode;
     private String country;
+    @OneToMany
+    @JoinColumn(name = "email", referencedColumnName = "customerID")
+
+    private Customer email;
+
 
 
 
