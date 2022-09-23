@@ -15,8 +15,8 @@ public class Post {
    @Id
    @Column(name="post_id")
     private int postId;
-   @ManyToOne
-   @JoinColumn(name = "email", referencedColumnName = "customerID")
+  // @ManyToOne
+  // @JoinColumn(name = "email", referencedColumnName = "customerID")
     private String email;
     private String msg;
     private String img;

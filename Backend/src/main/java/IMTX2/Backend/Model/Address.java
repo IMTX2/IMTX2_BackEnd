@@ -21,10 +21,10 @@ public class Address {
     @Column(name="zip_code")
     private int zipCode;
     private String country;
-    @OneToMany
-    @JoinColumn(name = "email", referencedColumnName = "customerID")
+   // @OneToMany
+    //@JoinColumn(name = "email", referencedColumnName = "customerID")
 
-    private Customer email;
+    private String email;
 
 
 
